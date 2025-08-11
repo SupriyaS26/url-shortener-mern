@@ -1,58 +1,122 @@
-/* Container for the form */
-.url-form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* App.css */
+
+body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
 }
 
-/* The input box */
-.url-input {
-  width: 100%;
+.app-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #0077cc;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  color: #005fa3;
+}
+
+input[type="text"] {
+  width: 70%;                /* make input take 70% width */
+  max-width: none;           /* remove max-width limit */
   padding: 15px 20px;
-  font-size: 1.25rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  font-size: 1.4rem;
+  border-radius: 0 0 0 0; /* rounded corners only on left side */
+  border: 2px solid #0077cc;
+  box-shadow: none;
   outline: none;
-  transition: border-color 0.3s ease;
+  box-sizing: border-box;   /* include padding in width */
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.url-input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
-}
-
-/* The submit button */
-.url-submit-btn {
-  margin-top: 15px;
-  padding: 15px 25px;
-  background-color: #4a90e2;
+button {
+  width: 25%;               /* button takes 25% width */
+  padding: 15px 0;
+  font-size: 1.2rem;
+  border-radius: 0 12px 12px 0;  /* rounded corners on right side */
+  border: 2px solid #0077cc;
+  background-color: #0077cc;
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;        /* gap between input and button */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+
+
+/* Shorten button */
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 30px;
   font-size: 1.1rem;
-  font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Admin toggle button */
+.admin-toggle-btn {
+  margin-top: 2rem;
+  background-color: #ff7f50;
+}
+
+.admin-toggle-btn:hover {
+  background-color: #e3643f;
+}
+
+/* Admin list table styling */
+.admin-section table {
   width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
-.url-submit-btn:hover {
-  background-color: #357ABD;
+.admin-section th, 
+.admin-section td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
 }
 
-/* Short URL display box */
-.short-url-box {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e6f0ff;
-  border: 1px solid #4a90e2;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  word-break: break-all;
-  text-align: center;
-  color: #23527c;
+.admin-section th {
+  background-color: #0077cc;
+  color: white;
+}
+
+.admin-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-section a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.admin-section a:hover {
+  text-decoration: underline;
 }
